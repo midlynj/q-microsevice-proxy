@@ -18,7 +18,7 @@ public class BookResourceTest {
                 .formParam("year", 2020)
                 .formParam("genre", "IT").
                 when()
-                .post("/api/books").
+                .post("/api/books/create").
                 then()
                 .statusCode(201)
                 .body("isbn_13", startsWith("13-"))

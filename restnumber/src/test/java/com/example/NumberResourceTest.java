@@ -15,7 +15,7 @@ public class NumberResourceTest {
     public void shouldGenerateIsbnNumbers() {
         given().
                 when()
-                .get("/api/numbers").
+                .get("/api/numbers/generate").
                 then()
                 .statusCode(200)
                 .body("isbn_13", startsWith("13-"))
